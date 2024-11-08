@@ -18,4 +18,4 @@ else
 fi
 ```
 Empezamos el script comprobando si al ser ejecutado se ha añadido un número de puerto como parámetro, si no es así notificamos al usuario de que falta
-Habiendose ejecutado correctamente con su parámetro, empezamos buscando 
+Habiendose ejecutado correctamente con su parámetro, empezamos buscando si la orden "listen" con dicho puerto existe en el archivo ports.conf, si existe se le muestra un mensaje al usuario indicándolo y se cierra, si no, añadimos la orden "listen" con el parámetro pasado al archivo ports.conf y notificamos al usuario con un mensaje por pantalla
