@@ -21,7 +21,22 @@ Empezamos el script comprobando si al ser ejecutado se ha añadido un número de
 Habiendose ejecutado correctamente con su parámetro, empezamos buscando si la orden "listen" con dicho puerto existe en el archivo ports.conf, si existe se le muestra un mensaje al usuario indicándolo y se cierra, si no, añadimos la orden "listen" con el parámetro pasado al archivo ports.conf y notificamos al usuario con un mensaje por pantalla
 
 ## 2 Crea un script que añada un nombre de dominio y una ip al fichero hosts. Debemos comprobar que no existe dicho dominio en el fichero hosts
-
+```bash
+if [ "$#" -ne 2]
+then
+	echo "falta ip y host"
+else
+	echo "correcto"
+	grep "$1 $2" "/etc/hosts"
+	if["#?" eq 0]
+	then
+		echo "dominio ya existente en hosts"
+	else
+		echo "Dominio añadido"
+		echo "$1 $2" >> "/etc/host"
+	fi
+fi
+```
 
 ## 3 Crea un script que nos permita crear una página web con un título, una cabecera y un mensaje
 
