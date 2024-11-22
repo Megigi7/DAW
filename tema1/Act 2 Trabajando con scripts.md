@@ -7,7 +7,7 @@ then
 	echo "falta num puerto"
 else 
 	echo "correcto"
-	GREP "LISTEN$1" "/etc/apache2/parts.conf"
+	GREP "LISTEN$1" "/etc/apache2/ports.conf"
 	if["$?" eq 0]
 	then
 		echo "Listen ya encontrado en ports.conf"
@@ -37,6 +37,7 @@ else
 	fi
 fi
 ```
+Este script es parecido al anterior, solo que esta vez contamos con dos parámetros y lo buscamos en el archivo /etc/hosts, si ya existe avisamos y si no lo añadimos
 
 ## 3 Crea un script que nos permita crear una página web con un título, una cabecera y un mensaje
 
