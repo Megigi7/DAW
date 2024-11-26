@@ -40,6 +40,50 @@ fi
 Este script es parecido al anterior, solo que esta vez contamos con dos parámetros y lo buscamos en el archivo /etc/hosts, si ya existe avisamos y si no lo añadimos
 
 ## 3 Crea un script que nos permita crear una página web con un título, una cabecera y un mensaje
+```bash
+if ["$#" -ne 3];
+then
+	echo "Parametros: titulo | cabecera | mensaje"
+else
+	TITULO $1
+	CABECERA = $2
+	MENSAJE $3
+	NOMBRE_ARCHIVO = "web.html"
+	echo "correcto, pagina creada como $NOMBRE_ARCHIVO"
+	cat <<EOL> $NOMBRE_ARCHIVO
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>$TITULO</title>
+</head>
+<body>
+	<h1>$CABECERA</h1>
+	<p>$MENSAJE</p>
+</body>
+</html>
+EOL
+fi
+```
+Explicacion
 
+### PUESTA EN MARCHA DE LOS SCRIPTS
+Todos estos scripts para ser utilizados necesitan, en primer lugar, darle los permisos necesarios, lo hacemos con:
+```bash
+chmod 755 -nuestro archivo-
+```
+
+#### Script 1:
+
+
+#### Script 2:
+
+
+#### Script 3:
+Ejecutamos el script y vemos que el archivo se ha creado
+![image](https://github.com/user-attachments/assets/5a85c95b-94c6-4e74-babe-d3ba222168b0)
+
+Comprobamos el contenido del archivo
+![image](https://github.com/user-attachments/assets/08e0bdb8-89ca-4b63-b386-afd0ea86c821)
 
 
