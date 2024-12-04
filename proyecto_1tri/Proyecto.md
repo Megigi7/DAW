@@ -167,5 +167,9 @@ Lo modificamos y ajustamos estas líneas
 Creamos las estadísiticas iniciales con:
 ![image](https://github.com/user-attachments/assets/c200d462-c617-4030-8ec5-612392922273)
 
+Creamos un alias para acceder a AWStats, editamos el archivo de configuración de Apache
+```bash
+sudo nano /etc/apache2/sites-available/000-default.conf
+```
 
 
