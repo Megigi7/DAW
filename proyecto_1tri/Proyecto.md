@@ -88,6 +88,7 @@ Finalmente podemos iniciar sesión y acceder a WordPress con el usuario introduc
 
 
 - Python
+Activamos el módulo “wsgi” para permitir la ejecución de aplicaciones Python
 ```bash
 sudo apt-get install libapache2-mod-wsgi-py3
 ```
@@ -104,11 +105,11 @@ Creamos un archivo dentro de mypythonapp que será el controlador añadiendole l
 Además, le añadimos lo siguiente
 ![image](https://github.com/user-attachments/assets/d35493a8-83ae-44e5-8e57-251a1ae2ddef)
 
-Editamos un nuevo archivo en la ruita especificada, le añadimos lo que se ve en el archivo
+Editamos un nuevo archivo en la ruta especificada, le añadimos lo que se ve en el archivo
 ```bash
 sudo nano /etc/apache2/sites-availables/python-web.conf
 ```
-![image](https://github.com/user-attachments/assets/21c259b7-d86c-445c-8ccc-9b3d216d90b0)
+![image](https://github.com/user-attachments/assets/bc160c92-cfbd-4e4c-ab7d-7c66da1c98bb)
 
 
 Activamos nuestro sitio web y reiniciamos apache
@@ -116,3 +117,19 @@ Activamos nuestro sitio web y reiniciamos apache
 sudo a2ensite python-web
 systemctl reload apache2
 ```
+
+Editamos el archivo hosts y le añadimos ambas direcciones
+```bash
+sudo nano /etc/hosts
+```
+![image](https://github.com/user-attachments/assets/32db9bc5-a630-41b6-ac3a-c1b4ee84af70)
+
+Creamos un script de python que será lo que se verá en la web
+```bash
+sudo nano /var/www/html/departamentos.centro.intranet/public_html/index.py
+```
+![image](https://github.com/user-attachments/assets/aad6608e-4071-468d-8efb-f57a6f250627)
+
+Ejecutamos el script accediendo a su dirección
+![image](https://github.com/user-attachments/assets/2ffd7534-3174-49ab-9584-421ff5d3b2fb)
+
