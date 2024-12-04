@@ -132,4 +132,40 @@ sudo nano /var/www/html/departamentos.centro.intranet/public_html/index.py
 
 Ejecutamos el script accediendo a su dirección
 ![image](https://github.com/user-attachments/assets/2ffd7534-3174-49ab-9584-421ff5d3b2fb)
+- Adicionalmente protegeremos el acceso a la aplicación python mediante autenticación
+Protegeremos nuestra aplicación con htpasswd. Instalamos:
+```bash
+sudo apt install apache2-utils
+```
+Creamos una archivo de contraseña para un nuevo usuario, en nuestro caso "admin"
+![image](https://github.com/user-attachments/assets/7249b23b-cbd8-4e02-a1e7-cb1723cd3064)
+
+En el archivo de configuración de nuestro sitio añadimos estas líneas
+![image](https://github.com/user-attachments/assets/8c7d3cfd-c61d-4f1d-961d-5be5e00cdfdd)
+
+Reiniciamos apache
+```bash
+systemctl restart apache2
+```
+Accedemos a nuestra página web, nos aparece esta alerta donde nos pide nuestras credenciales, si introducimos los datos que especificamos en el archivo creado anteriormente, podremos acceder
+![image](https://github.com/user-attachments/assets/1b73c20d-5daa-4af6-9531-fe915b163846)
+
+
+- Instala y configura awstat
+```bash
+sudo apt install awstats
+```
+Si ejecutamos el comando 'awstats' podemos ver que se ha instalado correctamente
+![image](https://github.com/user-attachments/assets/40cb89a3-935b-4861-9203-6607262498d3)
+
+Copiamos el archivo de configuración de awstats a uno nuevo, añadiendole el nombre de nuestro dominio
+![image](https://github.com/user-attachments/assets/6bfc4050-aa9c-4525-b61b-c18e28fae32e)
+
+Lo modificamos y ajustamos estas líneas
+![image](https://github.com/user-attachments/assets/146a92e6-55f8-4c35-8283-30bd140f4058)
+
+Creamos las estadísiticas iniciales con:
+![image](https://github.com/user-attachments/assets/c200d462-c617-4030-8ec5-612392922273)
+
+
 
