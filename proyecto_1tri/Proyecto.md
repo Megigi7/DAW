@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/10ae023d-ea7c-4169-bc7b-16bd57d7d095)## Práctica Servidores web - 1º trimestre
+- 1º trimestre
 
 ### Usaremos dos dominios mediante el archivo hosts: centro.intranet y departamentos.centro.intranet. El primero servirá el contenido mediante wordpress y el segundo una aplicación en python
 Empezaremos creando las carpetas correspondientes 
