@@ -171,5 +171,73 @@ Creamos un alias para acceder a AWStats, editamos el archivo de configuración d
 ```bash
 sudo nano /etc/apache2/sites-available/000-default.conf
 ```
+Y añadimos lo siguiente
+![image](https://github.com/user-attachments/assets/eecb4395-d04e-4712-a851-b6d906473af4)
 
+Guardamos y reiniciamos apache
+```bash
+systemctl restart apache2
+```
+Accedemos a la dirección añadiendo /awstats/awstats.pl?config="" y en config la dirección de nuestra web
+![image](https://github.com/user-attachments/assets/99068375-3e35-4fe6-84d4-2e8928752e74)
 
+- Instala un segundo servidor nginx bajo el dominio “servidor2.centro.intranet”.
+Instalamos NGINX
+```bash
+sudo apt install nginx
+```
+Creamos un archivo de configuración para nuestro servidor y añadimos lo siguiente
+```bash
+sudo nano /etc/nginx/sites-available/servidor2.centro.intranet
+```
+![image](https://github.com/user-attachments/assets/4af9e153-12a5-4897-90e3-c5d4402f2395)
+
+Creamos el directorio que será la raíz de nuestro dominio
+```bash
+sudo mkdir -p /var/www/servidor2.centro.intranet
+```
+Activamos la configuración de NGINX
+![image](https://github.com/user-attachments/assets/8672e5b5-fead-4d55-9984-391cf736d144)
+
+Hacemos que escuche por el puerto 8080. Editamos el archivo de configuración
+```bash
+sudo nano /etc/nginx/sites-available/default
+```
+![image](https://github.com/user-attachments/assets/83ffedbf-d17f-4585-89b7-3747ba270858)
+
+Creamos el archivo index.php en nuestra carpeta del servidor
+![image](https://github.com/user-attachments/assets/308c0717-d8dc-4b3d-bb24-9cf27496a73b)
+_no se muestra en las capturas, pero cambié de lugar el directorio del servidor con mv_
+![image](https://github.com/user-attachments/assets/bd436613-83cb-40af-af46-521f43c27d93)
+
+Editamos el archivo hosts y añadimos la siguiente línea
+```bash
+sudo nano /etc/hosts
+```
+![image](https://github.com/user-attachments/assets/f9b027e2-be97-4a3d-a90f-73c6d6ca8212)
+
+Accedemos a la página y podremos ver el archivo generado
+![image](https://github.com/user-attachments/assets/d66d8251-22fe-40f0-bf65-0db94a89e381)
+
+Nuestro servidor nginx con php estaría listo, no hemos necesitado instalar nada de php ya que lo hicimos antes
+
+-  Instala phpmyadmin
+```bash
+sudo apt install phpmyadmin -y
+```
+Al instalar, nos aparecerá esta ventana, elegimos apache2
+![image](https://github.com/user-attachments/assets/615f7f1c-de55-419b-99df-8470f9092b87)
+
+Después elegimos "Sí" para crear la base de datos
+![image](https://github.com/user-attachments/assets/20c53726-b00c-426d-9a9d-e997849368fe)
+
+Nos pedirá una contraseña, introducimos una que cumpla los requisitos de seguridad
+![image](https://github.com/user-attachments/assets/c1bbb483-5da5-4bdf-b23e-623d988b6cc3)
+
+Una vez instalado, creamos un enlace simbólico para phpmyadmin
+![image](https://github.com/user-attachments/assets/232d9bf3-3f07-40c0-9c62-b3742579b431)
+
+Accedemos a la direccion de nuestro dominio añadiendole /phpmyadmin
+![image](https://github.com/user-attachments/assets/1645b7de-ae82-4655-932a-4627913734a7)
+
+Con esto, phpmyadmin estaría instalado y listo para ser usado y nuestra práctica habría finalizado
