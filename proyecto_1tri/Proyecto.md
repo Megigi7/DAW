@@ -89,6 +89,7 @@ Finalmente podemos iniciar sesión y acceder a WordPress con el usuario introduc
 
 
 - Python
+  
 Activamos el módulo “wsgi” para permitir la ejecución de aplicaciones Python
 ```bash
 sudo apt-get install libapache2-mod-wsgi-py3
