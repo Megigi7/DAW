@@ -96,9 +96,9 @@ sudo apt-get install libapache2-mod-wsgi-py3
 ```
 Creamos las carpetas necesarias para la estructura de python
 ```bash
-sudo /var/www/html/departamentos.centro.intranet/mypythonapp
-sudo /var/www/html/departamentos.centro.intranet/public-html
-sudo /var/www/html/departamentos.centro.intranet/mypythonapp/logs
+sudo mkdir /var/www/html/departamentos.centro.intranet/mypythonapp
+sudo mkdir /var/www/html/departamentos.centro.intranet/public-html
+sudo mkdir /var/www/html/departamentos.centro.intranet/mypythonapp/logs
 ```
 
 Creamos un archivo dentro de mypythonapp que será el controlador añadiendole lo escrito en el comando
