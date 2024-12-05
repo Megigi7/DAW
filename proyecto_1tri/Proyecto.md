@@ -78,6 +78,7 @@ Movemos todo lo de la carpeta recién creada "wordpress" a nuestra carpeta
 ![image](https://github.com/user-attachments/assets/6c9fe3b2-5bcd-4671-bbc0-21422e786a15)
 
 -- Accedemos a Wordpress
+
 Para acceder introducimos la dirección "Nuestra IP"/centro.intranet
 ![image](https://github.com/user-attachments/assets/2a3cad57-c4aa-4bec-9a12-d1d5eace845c)
 
