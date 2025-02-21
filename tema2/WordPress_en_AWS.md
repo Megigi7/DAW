@@ -2,7 +2,7 @@
 En esta tarea configuraremos un servidor web apache montado en una instancia EC2 Ubuntu con un sistema de almacenamiento en EFS y la base de datos que esté gestionada por RDS en una subred privada.
 Aunque algunos de los pasos detallados ya han sido realizados en el pasado, yo lo reharé para acompañar la explicacion
 
-## 1. Creación de infraestructura de red
+## 1. Creación de Instancia
 Para comenzar, antes de crear las instancias, necesitamos crear nuestra infraestructura de red en AWS, lo haremos siguiendo estos pasos:
 Accedemos a el apartado "VPC" y hacemos clic en "Crear VPC"
 
@@ -38,8 +38,19 @@ Una vez configurado, guardamos con "Lanzar Instancia" ![image](https://github.co
 Cuando finalice la creación de la instancia nos saldrá este mensaje
 ![image](https://github.com/user-attachments/assets/f246e3b6-6c21-43fe-8a92-7250e50d298d)
 
+Como realizaremos la conexión por SSH y estamos en Windows, usaremos la aplicacion MobaXterm
+
 Si hacemos clic en su id nos llevará al apartado "Instancias" donde veremos que esta nueva instancia está en ejecución
 Dentro de este apartado, si volvemos a hacer clic en la Id, nos lleva a una vista más detallada de la instacia, aquí hacemos clic en "Conectar"
 ![image](https://github.com/user-attachments/assets/8d1a1275-1131-47b2-8e3c-a2a80b121e5c)
+
+Aquí simplemente le damos a conectar, podríamos cambiar los campos señalados pero en este caso lo dejaremos por defecto ya que nos sirve igualmente
+
+![image](https://github.com/user-attachments/assets/ba3b90eb-912f-40cf-8700-74860903ae3d)
+
+Finalmente, ya estamos conectados a nuestra Instancia
+![image](https://github.com/user-attachments/assets/986aedbc-b1e6-4f7b-9245-dc585aa61ee4)
+
+## 2. Apache y PHP
 
 
