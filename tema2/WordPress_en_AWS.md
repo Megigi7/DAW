@@ -52,5 +52,14 @@ Finalmente, ya estamos conectados a nuestra Instancia
 ![image](https://github.com/user-attachments/assets/986aedbc-b1e6-4f7b-9245-dc585aa61ee4)
 
 ## 2. Apache y PHP
+Instalamos Apache introduciendo los siguientes comandos ↓
+```bash
+sudo apt update
+sudo apt install apache2
+```
+![image](https://github.com/user-attachments/assets/997e8850-16ed-4b00-8b63-46e5a886e3e8)
+
+Así actualizamos nuestra máquina, instalamos apache, iniciamos apache y habilitamos para que incie siempre
+
 
 
