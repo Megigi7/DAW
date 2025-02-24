@@ -182,8 +182,24 @@ Usamos el punto de acceso proporcionado para la BD
 La contraseña será la que establecimos al crear la instancia (Abcd1234% en mi caso)
 ![image](https://github.com/user-attachments/assets/ace676cb-d897-43a5-a1aa-783afd56586a)
 
+En la consola de mysql escribimos las siguientes líneas, con esto creamos la base de datos, el usuario y le damos permisos al usuario para poder trabajar en la base de datos
+```bash
+CREATE DATABASE wordpress; 
+CREATE USER 'user' IDENTIFIED BY 'user'; 
+GRANT ALL PRIVILEGES ON wordpress.* TO 'user'; 
+FLUSH PRIVILEGES;
+```
 
+Cuando accedemos a la IP pública, añadiendole /wordpress a la url, vemos esta pantalla
+![image](https://github.com/user-attachments/assets/429d7c53-f0bb-4747-bbdc-a5d4e6b18a5f)
 
+Para continuar con la instalación introducimos los datos que nos pide
+- El nombre de la base de datos es la que hemos creado en el paso anterior
+- Las credenciales son las que creamos anteriormente al crear la base de datos (admmin y Abcd1234% en mi caso)
+- El host de la base de datos será la puerta de enlace de nuestra base de datos
+![image](https://github.com/user-attachments/assets/fade0dd1-b328-40f2-ba2d-62bd966099d8)
+
+Una vez hemos accedido a la base de datos ya podríamos comenzar a trabajar con ella
 
 
 
