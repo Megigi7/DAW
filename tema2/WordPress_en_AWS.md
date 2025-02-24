@@ -120,9 +120,13 @@ Elegimos la VPC de nuestra práctica
 En este paso es importante tener en cuenta que el nombre de la base de datos inicial sea el mismo nombre que el de la instancia que establecimos enteriormente 
 ![image](https://github.com/user-attachments/assets/57dab83d-8522-4d75-98c4-8de48764291e)
 
+Una vez todo configurado, creamos la base de datos ![image](https://github.com/user-attachments/assets/45a433ae-9ba5-4231-bc70-b555c27dc617)
 
+Ajustamos el grupo de seguridad para permitir la entrada desde nuestra instancia.
+Esta configuración no es la ideal a que puede ser insegura, pero para nuestra práctica nos ahorrará problemas
+![image](https://github.com/user-attachments/assets/8adbcfcd-53d0-46ca-9a0b-9ad9d72d05d4)
 
-
+Seguimos configurando la conexión 
 
 
 
