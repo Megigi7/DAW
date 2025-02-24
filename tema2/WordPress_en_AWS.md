@@ -116,8 +116,6 @@ Introducimos un nombre a la base de datos y unas credenciales, en mi caso la con
 Elegimos la VPC de nuestra práctica
 ![image](https://github.com/user-attachments/assets/d167808b-55e7-443f-95bc-c027e6f204ff)
 
-![image](https://github.com/user-attachments/assets/0f863016-6929-4464-aee1-5a18be15b584)
-
 En este paso es importante tener en cuenta que el nombre de la base de datos inicial sea el mismo nombre que el de la instancia que establecimos enteriormente 
 ![image](https://github.com/user-attachments/assets/57dab83d-8522-4d75-98c4-8de48764291e)
 
