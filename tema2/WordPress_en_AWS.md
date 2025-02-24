@@ -61,8 +61,9 @@ sudo apt install apache2
 
 Así actualizamos nuestra máquina, instalamos apache, iniciamos apache y habilitamos para que incie siempre
 
-Si accedemos a la IP pública de nuestra instancia veríammos algo así
-![image](https://github.com/user-attachments/assets/8decc82f-6e73-4d3a-bc78-f039690f7c57)
+Si accedemos a la IP pública de nuestra instancia podremos ver la página de inicio de apache
+![image](https://github.com/user-attachments/assets/b5d4e424-0657-49f7-9788-963daf62a413)
+
 
 Continuamos instalando PHP con los siguientes comandos:
 
@@ -126,7 +127,62 @@ Ajustamos el grupo de seguridad para permitir la entrada desde nuestra instancia
 Esta configuración no es la ideal a que puede ser insegura, pero para nuestra práctica nos ahorrará problemas
 ![image](https://github.com/user-attachments/assets/8adbcfcd-53d0-46ca-9a0b-9ad9d72d05d4)
 
-Seguimos configurando la conexión 
+Seguimos configurando la conexión, seleccionamos la base de datos y le damos a "Acciones" > "Conexion de EC2" 
+![image](https://github.com/user-attachments/assets/8f57f6d8-94d0-404e-a72b-e45f1ec90e81)
+
+Elegimos nuestra instancia y guardamos
+![image](https://github.com/user-attachments/assets/1eb15f70-5c11-4d81-8316-0344eed68f53)
+Nos saldrá un resumen de la configuración establecida, revisamos que esté todo como queremos y continuamos
+
+Entrando a los detalles de la base de datos podremos ver su Punto de enlace
+![image](https://github.com/user-attachments/assets/95872bd4-8a2c-47a9-be27-c09c77d1cacb)
+
+Ya tendríamos lista nuestra base de datos, pasamos al siguiente punto
+
+
+## 4. Elastic File System.
+Accedemos al apartado "EFS" y hacmeos clic en "Crear sistema de archivos"
+![image](https://github.com/user-attachments/assets/60fc08a5-3350-49bc-90ea-f5e31209d2f5)
+
+Establecemos un nombre y elegimos la VPC de nuestra práctica
+![image](https://github.com/user-attachments/assets/c8751d21-49c1-483b-a2bc-d17283d6901b)
+
+Comprobamos que se ha creado
+![image](https://github.com/user-attachments/assets/e394beab-c70b-4eb0-8556-8882431c8012)
+
+Asociamos el EFS a nuestra instancia seleccionandole y haciendo clic en "Asociar"
+![image](https://github.com/user-attachments/assets/98c8026d-a96a-49ab-bfdd-ec0f8980def6)
+
+Nos da unas instrucciones para poder conectarse, elegiremos el segundo
+![image](https://github.com/user-attachments/assets/4a47863b-6f1d-4e1a-8271-1255360c78d1)
+
+Antes de ejecutar el comando proporcionado, crearemos la carpeta "efs" y ejecutamos el comando de instalacion de efs
+![image](https://github.com/user-attachments/assets/5c94b741-4a3d-4ce7-a45b-85b84bfc0f24)
+![image](https://github.com/user-attachments/assets/717d1f81-7fde-4d95-a420-94a52265ff53)
+
+Ejecutamos el comando proporcionado:
+![image](https://github.com/user-attachments/assets/e29f4471-03de-4667-b946-7a34785b9dd2)
+
+Ya tenemos todo listo, podemos instalar Wordpress
+
+## 5. Instalación de Wordpress
+Accedemos al directorio /var/www/html y ejecutamos el siguiente comando para descargar Wordpress
+![image](https://github.com/user-attachments/assets/a7b93ac3-6398-4ba2-902e-7f740082a321)
+
+Descomprimimos el fichero descargado
+![image](https://github.com/user-attachments/assets/34518fe4-4f38-4b56-ab7f-52651cc0dd73)
+
+Como podemos ver en la captura, ya tenemos nuestra carpeta de Wordpres
+
+Para crear las credenciales seguimos los siguientes pasos:
+![image](https://github.com/user-attachments/assets/99e50b50-877d-4d65-8398-20ab691dd90c)
+
+Nos conectamos a la instancia de la base de datos con el siguiente comando:
+Usamos el punto de acceso proporcionado para la BD
+La contraseña será la que establecimos al crear la instancia (Abcd1234% en mi caso)
+![image](https://github.com/user-attachments/assets/ace676cb-d897-43a5-a1aa-783afd56586a)
+
+
 
 
 
