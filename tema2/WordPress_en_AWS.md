@@ -61,5 +61,69 @@ sudo apt install apache2
 
 Así actualizamos nuestra máquina, instalamos apache, iniciamos apache y habilitamos para que incie siempre
 
+Si accedemos a la IP pública de nuestra instancia veríammos algo así
+![image](https://github.com/user-attachments/assets/8decc82f-6e73-4d3a-bc78-f039690f7c57)
+
+Continuamos instalando PHP con los siguientes comandos:
+
+Actualizamos nuestra instancia para asegurar que tenemos todo lo necesario instalado 
+```bash
+sudo apt -y update && sudo apt upgrade
+```
+
+Instalamos php como un módulo de Apache:
+
+![image](https://github.com/user-attachments/assets/6dd93d02-9245-4159-83b4-f85bac34718f)
+
+En mi caso no especificaré versión ya que la versión que indicada en el manual no está disponuble en instancias Ubuntu, así que ejecutaremos el mismo comando sin especificar versión
+
+
+También necesitamos instalar mysql como módulo de apache:
+
+![image](https://github.com/user-attachments/assets/f6a9abb1-c2d2-45e0-ac6b-d52e6ef2a769)
+
+
+Y reiniciamos apache:
+```bash
+sudo systemctl restart apache2
+```
+
+Comprobamos que php esté instalando preguntando por su versión
+![image](https://github.com/user-attachments/assets/e7e88eef-f772-41da-8b49-0bc4c41fe310)
+
+
+## 3. Creación de Base de Datos
+En AWS, accedemos al apartado RDS
+![image](https://github.com/user-attachments/assets/958d1d7d-7b74-4f1b-9b21-882ceb36d679)
+
+Hacemos clic en "Crear nueva base de datos"
+
+![image](https://github.com/user-attachments/assets/01ac0695-d589-4a12-a7b6-e6b72ae6c95f)
+
+Configuramos las opciones de la base de datos siguiendo las imágenes:
+![image](https://github.com/user-attachments/assets/ef83df94-cfd9-4e67-b058-ef48032a4490)
+
+![image](https://github.com/user-attachments/assets/84a65d1e-b789-4772-b739-bd43f6d543fa)
+
+Introducimos un nombre a la base de datos y unas credenciales, en mi caso la contraseña es "Abcd1234%"
+![image](https://github.com/user-attachments/assets/48b55277-ace2-4f03-b4bf-cdf7c3d95402)
+
+![image](https://github.com/user-attachments/assets/c809b1fa-59d5-4468-9c47-4742d9fb96f8)
+
+![image](https://github.com/user-attachments/assets/7a8fbe97-a745-4828-8f4d-929ba51b6caf)
+
+Elegimos la VPC de nuestra práctica
+![image](https://github.com/user-attachments/assets/d167808b-55e7-443f-95bc-c027e6f204ff)
+
+![image](https://github.com/user-attachments/assets/0f863016-6929-4464-aee1-5a18be15b584)
+
+En este paso es importante tener en cuenta que el nombre de la base de datos inicial sea el mismo nombre que el de la instancia que establecimos enteriormente 
+![image](https://github.com/user-attachments/assets/57dab83d-8522-4d75-98c4-8de48764291e)
+
+
+
+
+
+
 
 
