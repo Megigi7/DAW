@@ -30,3 +30,5 @@ Ahora vemos como aparecen los dos contenedores presentes en el apartado anterior
 
 ## Actividades del segundo artículo
 Ejecutamos el siguiente comando para crear la imagen
+
+
