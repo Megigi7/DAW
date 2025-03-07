@@ -1,4 +1,4 @@
-# Practica 3
+# Práctica 3
 ## Descarga la imagen de ubuntu, hello-world y nginx
 Para descargar dichas imáganes ejecutamos el mismo comando para las tres, especificando su nombre: 
 
