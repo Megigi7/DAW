@@ -42,18 +42,18 @@ Mi ejemplo:
 ### Construye el contenedor
 Para construir el contenedor, en la misma carpeta donde se encuentra mi Dockerfile, escribimos lo siguiente:
 
-![image](https://github.com/user-attachments/assets/788072d6-a293-4b56-bb54-50b878512345)
+![image](https://github.com/user-attachments/assets/3a4af484-56c1-43e3-a426-e74a78ceb123)
 
-El nombre que le daremos a la imagen que usaremos en el contenedor es "mi-imagen", podremos modificarlo cuando queramos
+El nombre que le daremos a la imagen que usaremos en el contenedor es "imagen-mdaw", podremos modificarlo cuando queramos
 
 ### Ejecútalo
 Con el siguiente comando ponemos en marcha el contenedor con nuestra imagen
 
-![image](https://github.com/user-attachments/assets/40f4e8af-3d23-4aa2-b20d-bf6614dcbf3c)
+![image](https://github.com/user-attachments/assets/f298b0ee-91cb-4a94-889c-a0511c541bef)
 
 Aquí podemos ver como devuelve lo que hemos establecido
 
-![image](https://github.com/user-attachments/assets/975b4038-55f0-4354-97cd-a6933c3fdd01)
+![image](https://github.com/user-attachments/assets/5b3efe2b-2cee-441f-aaaf-458a7bebcb7b)
 
 
 ### Create una cuenta en hub.docker.com
@@ -67,5 +67,24 @@ Desde la terminal escribimos el siguiente comando introduciendo nuestro nombre d
 
 
 ### Publícalo
+Etiquetamos la imagen de la siguiente manera antes de subirlo
+
+![image](https://github.com/user-attachments/assets/d3a7dfd6-13fc-4926-a424-a6666a412cc1)
+
+Seguimos con el siguiente comando, con esto subiremos la imagen a dockerhub
+
+![image](https://github.com/user-attachments/assets/ae9b9546-d28d-4fc7-9c59-fdeb6b844a66)
+
+
+Si accedemos, podremos ver que se ha subido correctamente
+
+![image](https://github.com/user-attachments/assets/6b9fb747-aadf-4499-883c-b506bb1ab637)
+
+
+
+
+
+
+
 
 
