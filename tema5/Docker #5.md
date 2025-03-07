@@ -47,5 +47,12 @@ Reiniciamos los servicios de docker y accedemos de nuevo a la página, veremos l
 
 ![image](https://github.com/user-attachments/assets/62113774-eaa8-47d4-9d46-50902b88d2ea)
 
+Como podemos ver, aparece el contenido del archivo index.php (phpinfo)
+
+![image](https://github.com/user-attachments/assets/28d7a53c-4301-49c6-bce3-c9a862cc3854)
+
+
+## Ejemplo 3: Implementación de una red personalizada en Docker Compose
+Comenzamos modificando el archivo docker-compose.yml de nuevo para añadir una red personalizada
 
 
